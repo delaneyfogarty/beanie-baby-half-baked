@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useHistory } from 'react-router-dom';
 import { getSingleBeanie } from './services/fetch-utils';
 
 export default function BeanieDetail() {
@@ -7,6 +7,7 @@ export default function BeanieDetail() {
   // you'll need to get the route param using the appropriate react router hook
   const [beanieBaby, setBeanieBaby] = useState({});
   const params = useParams();
+  const history = useHistory();
 
   useEffect(() => {
     // you'll need to define a fetch function here (then call it below) that gets this page's beanie baby and injects it into state using the correct state handler
@@ -20,6 +21,7 @@ export default function BeanieDetail() {
 
   function handleBeanieClick() {
     // here's a challenge. How can you link on click to the beanie baby's correct entry in the official beanie baby fan site?
+    history.push(`/beanies/${params.id}`);
   }
 
   return (

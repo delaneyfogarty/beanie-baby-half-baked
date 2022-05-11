@@ -5,7 +5,7 @@ export default function BeaniesList({ beanieBabies }) {
     <div className="beanies">
       {/* render out the beanie babies as a list */}
       {beanieBabies.map((beanieBaby) => (
-        <BeanieBaby key={beanieBaby.title + beanieBaby.image} beanieBaby={beanieBaby} />
+        <BeanieBaby key={beanieBaby.id} beanieBaby={beanieBaby} />
       ))}
     </div>
   );
