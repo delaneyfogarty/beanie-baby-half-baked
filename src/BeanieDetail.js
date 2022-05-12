@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams, useHistory } from 'react-router-dom';
 import { getSingleBeanie } from './services/fetch-utils';
+import './App.css';
 
 export default function BeanieDetail() {
   // you'll need to track the current beanieBaby in state

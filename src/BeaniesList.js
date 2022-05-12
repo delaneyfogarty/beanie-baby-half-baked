@@ -1,4 +1,5 @@
 import BeanieBaby from './BeanieBaby.js';
+import './App.css';
 
 export default function BeaniesList({ beanieBabies }) {
   return (
